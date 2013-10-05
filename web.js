@@ -6,7 +6,7 @@ var index =fs.readFileSync("/nodejs/index.html");
 app.use(express.logger());
 
 app.get('/', function(request, response) {
-  response.send(index);
+  response.render(index);
 });
 
 
