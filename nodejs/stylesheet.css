@@ -26,6 +26,15 @@ form{
 div{
     background-color:#00B5B5;
     border-radius:5px;
+    font-family:Oxygen;
+}
+#event{
+    position:absolute;
+    top:85px;
+    bottom: 8px;
+    left:8px;
+    right:8px;
+    color:#3E4651;
 }
 #lipage{
     position:absolute;
