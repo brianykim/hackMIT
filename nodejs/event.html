@@ -8,7 +8,14 @@
 <title>TapDat!</title>
 <script src="https://cdn.firebase.com/v0/firebase.js"></script>
     <script>
+      function populate(list){
+    for(var i = 0; i < list.length; i++){
+        var item = list[i];
+        $('#list').after('<li>' + item + '</li>');
+    }
+}
       var dataRef = new Firebase('https://hackmit.firebaseio.com');
+      var ArtistList = new Array();
       dataRef.on('value', function(snapshot) {
         var idList = snapshot.val();
 
@@ -26,7 +33,7 @@
           }
         });
         map.sort(function(a,b){return b-a});
-        var ArtistList = new Array();
+        //var ArtistList = new Array();
         for(y in map.sort()){
           //console.log(y+" : "+map[y]);
           ArtistList.push(y);
@@ -40,8 +47,11 @@
 <body>
   <h1>TapDat!</h1>
   <div id = "event">
-      <h2>Sample Event</h2>
-      <ul>
+      <h2>HackMIT</h2>
+    <ul>
+      <li id="list">Justin Timberlake </li>
+      <li> Kendrick Lamar </li>
+      <li> Nicki Minaj </l>
       </ul>
   </div>
   <div id = "button1">
