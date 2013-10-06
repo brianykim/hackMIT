@@ -12,17 +12,18 @@
         var map = new Object();
         var keys = Object.keys(idList);
         for (var i in keys) {
-          console.log(keys[i]);
-          var next = idList[keys[i]];
-          for (var i in next){
+          console.log(keys[i]); //prints out the id's
+
+          var next = idList[keys[i]]; //these are objects of num: name
+          var nextkeys = keys(next);
+          for (var i in nextkeys){
             console.log(next[i]);
-            map[next[i]]+=1;
           }
         }
-        var artists = Object.keys(map);
-        for(var j in artists){
-          console.log(artists[j]+" : "/*+map[artists[j]].toString()*/);
-        }
+//        var artists = Object.keys(map);
+  //      for(var j in artists){
+    //      console.log(artists[j]+" : "+map[artists[j]].toString());
+      //  }
       });
     </script>
     <title>Facebook ID test</title>
