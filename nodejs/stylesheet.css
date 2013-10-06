@@ -1,21 +1,19 @@
 h1{
-    /*padding:20px;*/
     height:70px;
     text-align:left;
-    background-color:#D0FFD6;
-    color:#687F6B;
-    font-family:Sniglet;
+    background-color:#3E4651;
+    color:#F0F0F0;
+    font-family:Oxygen;
     margin-top:5px;
     margin-bottom:5px;
-    /*margin-top:0px;
-    margin-bottom:10px;*/
     border-radius:5px;
     line-height:200%;
+    font-weight:100;
 }
 form{
     text-align:center;
-    color:#687F6B;
-    font-family:Sniglet;
+    color:#3E4651;
+    font-family:Oxygen;
 }
 #login{
     position:relative;
@@ -26,11 +24,13 @@ form{
     margin-top:5px;
 }
 div{
-    background-color:#84FF92;
+    background-color:#00B5B5;
+    border-radius:5px;
+}
+#lipage{
     position:absolute;
     top:85px;
     bottom:8px;
     left:8px;
     right:8px;
-    border-radius:5px;
 }
