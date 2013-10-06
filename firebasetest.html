@@ -7,6 +7,27 @@
       var dataRef = new Firebase('https://hackmit.firebaseio.com');
       dataRef.on('value', function(snapshot) {
         var idList = snapshot.val();
+
+        // Given a DataSnapshot containing a child 'fred' and a child 'wilma':
+        var map = new Object();
+        snapshot.forEach(function(childSnapshot) {
+          var childData = childSnapshot.val();
+          for ( var x in childData ){
+            if(childData[x] in map){
+              map[childData[x]]+=1;
+            }else{
+              map[childData[x]]=1;
+            }
+            //console.log(childData[x])
+          }
+        });
+        
+        for(var y in map){
+          console.log(y+" : "+map[y]);
+        }
+
+        /*
+        var idList = snapshot.val();
         //console.log(Object.keys(idList));
         //alert(idList.id);
         var map = new Object();
@@ -15,15 +36,16 @@
           console.log(keys[i]); //prints out the id's
 
           var next = idList[keys[i]]; //these are objects of num: name
-          var nextkeys = keys(next);
-          for (var i in nextkeys){
+          var nextkeys = keys[next]; //()
+          for (var i in keys){ //nextkeys
             console.log(next[i]);
           }
         }
-//        var artists = Object.keys(map);
-  //      for(var j in artists){
-    //      console.log(artists[j]+" : "+map[artists[j]].toString());
-      //  }
+        var artists = Object.keys(map);
+        for(var j in artists){
+        console.log(artists[j]+" : "+map[artists[j]].toString());
+        }
+        */
       });
     </script>
     <title>Facebook ID test</title>
