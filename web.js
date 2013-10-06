@@ -2,7 +2,7 @@ var express = require("express");
 
 var app = express.createServer();
 var fs = require('fs');
-var index =fs.readFileSync("~/Documents/hackMIT/nodejs/index.html");
+//var index =fs.readFileSync("/index.html");
 
 app.use(express.logger());
 //app.use(express.static(__dirname + '/public'));

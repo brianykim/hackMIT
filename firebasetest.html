@@ -9,7 +9,7 @@
         var idList = snapshot.val();
 
         // Given a DataSnapshot containing a child 'fred' and a child 'wilma':
-        var map = new Object();
+        var map = new Array();
         snapshot.forEach(function(childSnapshot) {
           var childData = childSnapshot.val();
           for ( var x in childData ){
@@ -21,10 +21,11 @@
             //console.log(childData[x])
           }
         });
-        
-        for(var y in map){
+        map.sort(function(a,b){return b-a});
+        for(y in map.sort()){
           console.log(y+" : "+map[y]);
         }
+
 
         /*
         var idList = snapshot.val();
