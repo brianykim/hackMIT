@@ -22,37 +22,20 @@
           }
         });
         map.sort(function(a,b){return b-a});
+        var ArtistList = new Array();
         for(y in map.sort()){
-          console.log(y+" : "+map[y]);
+          //console.log(y+" : "+map[y]);
+          ArtistList.push(y);
         }
+        console.log(ArtistList);
 
 
-        /*
-        var idList = snapshot.val();
-        //console.log(Object.keys(idList));
-        //alert(idList.id);
-        var map = new Object();
-        var keys = Object.keys(idList);
-        for (var i in keys) {
-          console.log(keys[i]); //prints out the id's
-
-          var next = idList[keys[i]]; //these are objects of num: name
-          var nextkeys = keys[next]; //()
-          for (var i in keys){ //nextkeys
-            console.log(next[i]);
-          }
-        }
-        var artists = Object.keys(map);
-        for(var j in artists){
-        console.log(artists[j]+" : "+map[artists[j]].toString());
-        }
-        */
       });
     </script>
     <title>Facebook ID test</title>
   </head>
   <body>
-    <p id="change"> some text </p>
-    <script>//alert("hello");</script>
+    <p></p>
+    <script></script>
   </body>
 </html>
