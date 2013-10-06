@@ -1,0 +1,19 @@
+<html>
+  <head>
+    <script src="https://cdn.firebase.com/v0/firebase.js"></script>
+    <script>
+      var dataRef = new Firebase('https://hackmit.firebaseio.com');
+      dataRef.on('value', function(snapshot) {
+        var idList = snapshot.val();
+        idList['foo'] = 'bar';
+        console.log(Object.keys(idList));
+        alert(idList.hackmit);
+      });
+    </script>
+    <title>Facebook ID test</title>
+  </head>
+  <body>
+    <p id="change"> some text </p>
+    <script>//alert("hello");</script>
+  </body>
+</html>

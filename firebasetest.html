@@ -1,0 +1,34 @@
+
+
+<html>
+  <head>
+    <script src="https://cdn.firebase.com/v0/firebase.js"></script>
+    <script>
+      var dataRef = new Firebase('https://hackmit.firebaseio.com');
+      dataRef.on('value', function(snapshot) {
+        var idList = snapshot.val();
+        //console.log(Object.keys(idList));
+        //alert(idList.id);
+        var map = new Object();
+        var keys = Object.keys(idList);
+        for (var i in keys) {
+          console.log(keys[i]);
+          var next = idList[keys[i]];
+          for (var i in next){
+            console.log(next[i]);
+            map[next[i]]+=1;
+          }
+        }
+        var artists = Object.keys(map);
+        for(var j in artists){
+          console.log(artists[j]+" : "/*+map[artists[j]].toString()*/);
+        }
+      });
+    </script>
+    <title>Facebook ID test</title>
+  </head>
+  <body>
+    <p id="change"> some text </p>
+    <script>//alert("hello");</script>
+  </body>
+</html>
