@@ -1,0 +1,36 @@
+h1{
+    /*padding:20px;*/
+    height:70px;
+    text-align:left;
+    background-color:#D0FFD6;
+    color:#687F6B;
+    font-family:Sniglet;
+    margin-top:5px;
+    margin-bottom:5px;
+    /*margin-top:0px;
+    margin-bottom:10px;*/
+    border-radius:5px;
+    line-height:200%;
+}
+form{
+    text-align:center;
+    color:#687F6B;
+    font-family:Sniglet;
+}
+#login{
+    position:relative;
+    margin-top:150px;
+}
+#buttons{
+    position:relative;
+    margin-top:5px;
+}
+div{
+    background-color:#84FF92;
+    position:absolute;
+    top:85px;
+    bottom:8px;
+    left:8px;
+    right:8px;
+    border-radius:5px;
+}
