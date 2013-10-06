@@ -1,3 +1,24 @@
 h1{
-  text-align: center;
+    padding:20px;
+    text-align:left;
+    background-color:#D0FFD6;
+    color:#687F6B;
+    font-family:Sniglet;
+    margin-top:0px;
+    margin-bottom:10px;
+    border-radius:5px;
+}
+form{
+    padding:50px;
+    text-align:center;
+    color:#687F6B;
+    font-family:Sniglet;
+}
+#buttons{
+    margin:-80px;
+    color:#687F6B;
+}
+div{
+    background-color:#84FF92;
+    border-radius:5px;
 }
