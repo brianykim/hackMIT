@@ -6,17 +6,56 @@
 <script type="text/javascript" src="script.js"></script>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <title>TapDat!</title>
+<script src="https://cdn.firebase.com/v0/firebase.js"></script>
+    <script>
+      function populate(list){
+    for(var i = 0; i < list.length; i++){
+        var item = list[i];
+        $('#list').after('<li>' + item + '</li>');
+    }
+}
+      var dataRef = new Firebase('https://hackmit.firebaseio.com');
+      var ArtistList = new Array();
+      dataRef.on('value', function(snapshot) {
+        var idList = snapshot.val();
+
+        // Given a DataSnapshot containing a child 'fred' and a child 'wilma':
+        var map = new Array();
+        snapshot.forEach(function(childSnapshot) {
+          var childData = childSnapshot.val();
+          for ( var x in childData ){
+            if(childData[x] in map){
+              map[childData[x]]+=1;
+            }else{
+              map[childData[x]]=1;
+            }
+            //console.log(childData[x])
+          }
+        });
+        map.sort(function(a,b){return b-a});
+        //var ArtistList = new Array();
+        for(y in map.sort()){
+          //console.log(y+" : "+map[y]);
+          ArtistList.push(y);
+        }
+        //console.log(ArtistList);
+        populate(ArtistList);
+
+      });
+    </script>
 </head>
 <body>
   <h1>TapDat!</h1>
   <div id = "event">
-      <h2>Sample Event</h2>
-      <ul>
-          <li>Person 1</li>
-          <li>Person 2</li>
-          <li>Person 3</li>
-          <li>Person 4</li>
+      <h2>HackMIT</h2>
+    <ul>
+      <li id="list">Justin Timberlake </li>
+      <li> Kendrick Lamar </li>
+      <li> Nicki Minaj </l>
       </ul>
+  </div>
+  <div id = "button1">
+
   </div>
 </body>
 </html>
